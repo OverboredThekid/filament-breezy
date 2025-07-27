@@ -20,7 +20,7 @@ class TwoFactorPage extends SimplePage
     use InteractsWithFormActions;
     use WithRateLimiting;
 
-    protected static string $view = 'filament-breezy::filament.pages.two-factor';
+    protected string $view = 'filament-breezy::filament.pages.two-factor';
 
     protected bool $hasTopbar = false;
 
@@ -64,7 +64,7 @@ class TwoFactorPage extends SimplePage
                 ->autofocus()
                 ->suffixAction(
                     Forms\Components\Actions\Action::make('cancel')
-                        ->ToolTip(__('filament-breezy::default.cancel'))
+                        ->tooltip(__('filament-breezy::default.cancel'))
                         ->icon('heroicon-o-x-circle')
                         ->action(function () {
                             Filament::auth()->logout();
